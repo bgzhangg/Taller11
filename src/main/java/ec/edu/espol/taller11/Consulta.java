@@ -1,11 +1,10 @@
 package ec.edu.espol.taller11;
 
+import ec.edu.espol.taller11.Utilitarios.Fecha;
 import java.util.List;
 
 public class Consulta {
-    public int dia;
-    public int mes;
-    public int año;
+    public Fecha fecha;
     private String hora;
     private Paciente paciente;
     private Medico medico;
@@ -15,10 +14,8 @@ public class Consulta {
     private String tratamiento;
     private List<String> examenesMedicos;
 
-    public Consulta(int dia, int mes, int año, String hora, Paciente paciente, Medico medico, ServicioMedico servicioMedico, String diagnostico, String tratamiento, List<String> examenesMedicos) {
-        this.dia = dia;
-        this.mes = mes;
-        this.año = año;
+    public Consulta(Fecha fecha, String hora, Paciente paciente, Medico medico, ServicioMedico servicioMedico, String diagnostico, String tratamiento, List<String> examenesMedicos) {
+        this.fecha = fecha;
         this.hora = hora;
         this.servicioMedico = servicioMedico;
         this.paciente = paciente;
