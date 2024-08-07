@@ -12,7 +12,7 @@ public class Consulta {
     private boolean realizada;
     private String diagnostico;
     private String tratamiento;
-    private List<String> examenesMedicos;
+    private ExamenesMedicos examenesMedicos;
 
     public Consulta(Fecha fecha, String hora, Paciente paciente, Medico medico, 
             ServicioMedico servicioMedico) {
@@ -22,6 +22,7 @@ public class Consulta {
         this.paciente = paciente;
         this.medico = medico;
         this.realizada = false;
+        this.examenesMedicos = new ExamenesMedicos();
     }
 
     public String getHora() {
@@ -72,11 +73,14 @@ public class Consulta {
         this.tratamiento = tratamiento;
     }
 
-    public List<String> getExamenesMedicos() {
+    
+    //Examenes Medicos
+    
+    public ExamenesMedicos getExamenesMedicos() {
         return examenesMedicos;
     }
 
-    public void setExamenesMedicos(List<String> examenesMedicos) {
+    public void setExamenesMedicos(ExamenesMedicos examenesMedicos) {
         this.examenesMedicos = examenesMedicos;
     }
 
