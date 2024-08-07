@@ -4,7 +4,7 @@ import ec.edu.espol.taller11.Utilitarios.Fecha;
 import java.util.List;
 
 public class Consulta {
-    public Fecha fecha;
+    private Fecha fecha;
     private String hora;
     private Paciente paciente;
     private Medico medico;
@@ -14,7 +14,8 @@ public class Consulta {
     private String tratamiento;
     private List<String> examenesMedicos;
 
-    public Consulta(Fecha fecha, String hora, Paciente paciente, Medico medico, ServicioMedico servicioMedico, String diagnostico, String tratamiento, List<String> examenesMedicos) {
+    public Consulta(Fecha fecha, String hora, Paciente paciente, Medico medico, 
+            ServicioMedico servicioMedico) {
         this.fecha = fecha;
         this.hora = hora;
         this.servicioMedico = servicioMedico;

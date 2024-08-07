@@ -1,5 +1,7 @@
 package ec.edu.espol.taller11;
 
+import ec.edu.espol.taller11.Utilitarios.Fecha;
+
 public class Taller11{
     static SistemaAtencionMedico sistemaAtencionMedica;
     public static void main(String[] args) {
@@ -7,7 +9,7 @@ public class Taller11{
         Paciente paciente = sistemaAtencionMedica.obtenerPaciente("Dario");
         ServicioMedico servicioMedico = sistemaAtencionMedica.obtenerServicioMedico("Psiquiatria");
         Medico medico = sistemaAtencionMedica.obtenerMedico("Nohelia");
-        Consulta consulta = new Consulta(05,05,2002,"12:05",paciente,medico,servicioMedico,"dvasdv","asdvas",null);
+        Consulta consulta = new Consulta(new Fecha(05,05,2002),"12:05",paciente,medico,servicioMedico);
         sistemaAtencionMedica.agendarConsulta(paciente,consulta);
     }
 
