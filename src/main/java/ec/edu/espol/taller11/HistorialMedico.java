@@ -27,4 +27,11 @@ public class HistorialMedico {
     public void setRecetasMedicas(List<RecetaMedica> recetasMedicas) {
         this.recetasMedicas = recetasMedicas;
     }
+    
+    public void agregarConsultas(Consulta consulta){
+        consultas.add(consulta);
+    }
+    public void agregarReceta(RecetaMedica receta){
+        recetasMedicas.add(receta);
+    }
 }

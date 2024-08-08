@@ -31,9 +31,10 @@ public class SistemaAtencionMedico {
         int edadPaciente = paciente.getEdad();
         costoConsulta = calcularValorFinalConsulta(costoConsulta,edadPaciente);
         System.out.println("Se han cobrado "+ costoConsulta+ " dolares de su tarjeta de credito");
-        paciente.getHistorialMedico().getConsultas().add(consulta); //Hacer esto es incorrecto
+        paciente.agregarConsultaHistorial(consulta);
     }
 
+    
     public double calcularValorFinalConsulta(double costoConsulta, int edadPaciente){
         double valorARestar = 0;
         if(edadPaciente>=65){

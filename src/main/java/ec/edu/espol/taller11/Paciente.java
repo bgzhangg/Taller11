@@ -21,4 +21,11 @@ public class Paciente extends Persona {
         this.historialMedico = historialMedico;
     }
     
+    public void agregarConsultaHistorial (Consulta consulta){
+        historialMedico.agregarConsultas(consulta);
+    }
+    
+    public void agregarRecetaHistorial (RecetaMedica receta){
+        historialMedico.agregarReceta(receta);
+    }
 }
